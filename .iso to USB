@@ -1,0 +1,3 @@
+#Uses slitaz as an example, replace [Path_to_.iso] with your .iso
+
+dd if=[Path_to_.iso] of=/dev/sdb bs=512k
