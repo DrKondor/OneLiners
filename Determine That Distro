@@ -1,0 +1,3 @@
+# Determine what distro / architecture you're running
+
+uname -a
