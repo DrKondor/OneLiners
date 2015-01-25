@@ -1,0 +1,5 @@
+#play in color
+mplayer -vo caca moviename.extension
+
+#play in b/w
+mplayer -vo aa moviename.extension
