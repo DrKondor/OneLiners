@@ -1,0 +1,4 @@
+# Ahh, the the magical Bind command. Where have you been all my life? 
+# For example: This command binds the 'top' command to Ctrl-t -- awesome. 
+
+bind -x ‘”\C-t”:top
