@@ -1,0 +1,3 @@
+# More shortcut fun. On debian systems, drop this line into your ~/.bashrc for mad lulz
+
+alias icanhas="sudo apt-get install"
