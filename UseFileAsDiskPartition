@@ -1,0 +1,17 @@
+# Create a file with, say, 64Megs of zeros
+dd if=/dev/zero of=imagefile bs=1m count=64
+
+# Drop a filesystem on it. I'm using ext4 but go nuts and use btrfs or whatever if you want:
+mkfs.ext4 imagefile
+
+# Make a place to mount the file at:
+mkdir mountplace
+
+# Now you can mount the fucker. This is called a 'loopback device':  
+sudo mount -o loop imagefile mountplace
+
+# Add data, encrypt it, whatever. Just remember to unmount with:
+umount mountplace
+# when yer done.
+
+# That's all folks!
