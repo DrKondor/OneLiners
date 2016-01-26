@@ -1,0 +1,39 @@
+# So, you've got sensitive data that you need to protect.
+# Maybe your financial records, perhaps a secret clown fetish -- whatever it is you're into . . .
+# So, let's set up an "easy" to use encrypted storage area. 
+# For this example, start by creating a file 64 megabytes in size:
+
+dd if=/dev/zero/ of=BoringLookingFilename
+
+# Now let's encrypt this beast. You'll be prompted for a password. 
+# *WRITE IT DOWN* so you'll remember it, fool:
+
+cryptsetup luksFormat BoringLookingFilename
+
+# Use cryptsetup again to open the device. 
+# This will create a 'passthrough device' under /dev/mapper/ which you can name appropriately:
+
+cryptsetup luksOpen BoringLookingFilename CryptVolume
+
+# Drop a filesystem on it:
+
+mkfs.ext4 /dev/mapper/CryptVolume
+
+# We need somewhere to mount CryptVolume at:
+mkdir CryptMount
+
+# Now mount it:  
+sudo mount /dev/mapper/CryptVol CryptMount
+
+# Save your sensitive data to CryptMount as tho it were a regular unencrypted device.
+# When you're done, unmount it:
+
+umount CryptMount
+
+# Finally, close the damn thing (it's still accessible over at /dev/mapper/CryptVolume) 
+cryptsetup luksClose CryptVolume
+
+# . . . aand that's all she wrote. You can go on with your normal, unencrypted life, now, kids. :)
+
+
+
