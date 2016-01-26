@@ -1,7 +1,7 @@
 # Create a file with, say, 64Megs of zeros
 dd if=/dev/zero of=imagefile bs=1m count=64
 
-# Drop a filesystem on it. I'm using ext4 but go nuts and use btrfs or whatever if you want:
+# Drop a filesystem on it. I'm using ext4 but go nuts and use btrfs or whatever filesystem you want:
 mkfs.ext4 imagefile
 
 # Make a place to mount the file at:
