@@ -1,4 +1,4 @@
-# Create a file with, say, 64Megs of zeros
+# As an example, create a 64Meg file with, say, 64Megs of zeros
 dd if=/dev/zero of=imagefile bs=1m count=64
 
 # Drop a filesystem on it. I'm using ext4 but go nuts and use btrfs or whatever filesystem you want:
@@ -7,7 +7,7 @@ mkfs.ext4 imagefile
 # Make a place to mount the file at:
 mkdir mountplace
 
-# Now you can mount the fucker. This is called a 'loopback device':  
+# Now you can mount the fucker. This is called a 'loopback device' -- handy for running swapless, BTW:  
 sudo mount -o loop imagefile mountplace
 
 # Add data, encrypt it, whatever. Just remember to unmount with:
