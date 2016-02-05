@@ -1,0 +1,13 @@
+#!/bin/sh
+# I use this as a workaround for Xubuntu 14.04 not working with my laptop backlight. 
+
+#Sets backlight to 100% 
+xbacklight -set 100
+
+#Sets backlight to 50% 
+xbacklight -set 50
+
+#Sets backlight to 0% (or as low as it'll go)
+xbacklight -set 0
+
+# Of course you must have xbacklight installed. Have Fun!
