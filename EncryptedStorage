@@ -1,9 +1,9 @@
 # So, you've got sensitive data that you need to protect.
-# Maybe your financial records, perhaps a secret clown fetish -- whatever it is you're into . . .
+# Maybe your financial records, perhaps a secret fetish -- whatever it is . . .
 # So, let's set up an "easy" to use encrypted storage area. 
 # For this example, start by creating a file 64 megabytes in size:
 
-dd if=/dev/zero/ of=BoringLookingFilename
+dd if=/dev/zero of=BoringLookingFilename
 
 # Now let's encrypt this beast. You'll be prompted for a password. 
 # *WRITE IT DOWN* so you'll remember it, fool:
