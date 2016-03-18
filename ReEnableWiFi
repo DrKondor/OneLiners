@@ -1,0 +1,10 @@
+# Ubuntu Mate, for all of its niceties, still has a few rough edges here and there. 
+# One of these rough edges is a strange inabilibty to reactivate a Network connection after it has been disabled, either via the network manager menu, or by a hardware switch. 
+
+# I fixed it by editing the appropriate flag in /var/lib/NetworkManager/NetworkManager.state from false to true. 
+# The file itself is fairly straightforward.
+
+# After the edit, a quick reboot will bring back your ability to connect over WiFi. Hooray! 
+# I imagine that restarting Network Manager would have the same effect, but I haven't tested that yet.
+
+sudo vim /var/lib/NetworkManager/NetworkManager.state 
