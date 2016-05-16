@@ -1,8 +1,3 @@
+In here, you'll find a bunch of odd curiosities related to Linux. Basically just quick configs and workarounds that I've used on my oddball hardware. YMMV. 
 
-
-8/18/2014 I finally started to decide to seriously learn git. So I'm starting off with some little one liners in the commandline that are useful to know but not really worth memorizing . . . 
-
-So I figured its a good starting point. 
-
-7/19/2015
-Github kind of dumbs down git. My advice: If you really want to learn git, stick to the command line. On the other hand, github is incredibly easy to use for novices, and that's a start.  
+github is kinda like free storage, and I know I don't really use it correctly. But it makes git easy enough for rubes like me. Someday I'll do an interactive rebase on this repo so it's better organized. But for now, I'm really not feeling that ambitious
