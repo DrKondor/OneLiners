@@ -12,6 +12,7 @@ dev="TPPS/2 IBM TrackPoint"
 # Step 3: 
 # Enter the scrolling paramaters. Try the ones below for starters:
 xinput --set-int-prop "$dev" "Evdev Wheel Emulation Axes" 8 6 7 4 5
+# This next one works good on my T410s
 xinput --set-int-prop "$dev" "Evdev Wheel Emulation Button" 8 2
 xinput --set-int-prop "$dev" "Evdev Wheel Emulation" 8 1
 
